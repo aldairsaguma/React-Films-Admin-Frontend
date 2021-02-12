@@ -1,0 +1,103 @@
+@import '../../base/_extends';
+@import '../../base/_variables';
+@import '../../fonts/_fonts';
+
+.LoginScreeen{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    .LoginScreen__login{
+        display: grid;
+        grid-template-columns: minmax(90%, 350px);
+        max-width: 700px;
+        // box-shadow: 0 5px 8px 0 rgba(0,0,0,.2), 0 9px 26px 0 rgba(0,0,0,.19);
+        border: solid $black 1px;
+        border-radius: 4px;
+        font-size: 16px;
+        padding: 1em;
+        .Ingreso_Registro{
+            @extend .text-center;
+            font-size: 16px;
+            grid-column: span 1;
+            padding: 0 0 1rem 0;
+            border-bottom: solid $black 1px;
+            span{
+                font-size: 1.625em;
+                font-weight: 900;
+                font-family: $OpenSansBold;
+            }
+    
+        }
+        .ingreso{
+            grid-column: span 1;
+            .form-login{
+                box-sizing: border-box;
+                display: grid;
+                gap: 1em;
+                margin-top: 1em;
+                input{
+                    font-family: $OpenSansRegular;
+                    width: calc( 100% - 24px );
+                    height: 1.5em;
+                    outline: 0;
+                    padding: 3px 10px;
+                }
+                .div-submit{
+                    text-align: center;
+                    button{
+                        background: {
+                            color: #0062cc;
+                        };
+                        border-radius: 4px;
+                        border: none;
+                        color: $white;
+                        cursor: pointer;
+                        font-family: $OpenSansSemi;
+                        font-weight: 900;             
+                        font-size: 1.25em;
+                        width: 60%;
+                        outline: none;   
+                        padding: 0.3125em;
+                        &:hover{
+                            background-color: darken($color: #0062cc, $amount: 10);
+                        }
+                    }
+                }
+            }
+            .msg-error{
+                color: $msgError;
+                display: none;
+                font-family: $OpenSansRegular;
+                margin-top: 10px;
+                opacity: 0;
+                visibility: hidden;
+                text-align: center;
+                -webkit-transition: opacity 600ms, visibility 600ms;
+                transition: opacity 600ms, visibility 600ms;
+                span{
+                    font-size: 1em;
+                }
+            
+            }
+            .msg-error-active{
+               display: block;
+               visibility: visible;
+               opacity: 1;
+               animation: fade 1s;
+               font-size: 16px;
+            }
+
+            //face -> Un nombre cualquiera - se lo asigno al animation
+            @keyframes fade {
+                0% {
+                    opacity: 0;
+                }
+            
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'OpenSansBold';
+  src: url('./OpenSans-Bold.ttf') format('truetype');
+  
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'OpenSansSemi';
+  src: url('./OpenSans-SemiBold.ttf') format('truetype');
+  
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'OpenSansRegular';
+  src: url('./OpenSans-Regular.ttf') format('truetype');
+  
+  /* Safari, Android, iOS */
+}
+
+
+//Fonts
+$OpenSansBold: 'OpenSansBold', 'sans-serif';
+$OpenSansSemi : 'OpenSansSemi', 'sans-serif';
+$OpenSansRegular : 'OpenSansRegular', 'sans-serif';
+$FontAwesome :'Font Awesome 5 Free';

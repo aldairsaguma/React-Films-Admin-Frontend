@@ -1,0 +1,36 @@
+.sidebar{
+    border-right: solid $defaultBg 1px;
+    border-left: solid $defaultBg 1px;
+    color: #1c1c1c;
+    flex-basis: 300px;
+    font-size: 1rem;
+    font-family: $OpenSansSemi;
+    .sidebar__sidebar-content{
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .ul-options{
+        display: grid;
+        list-style: none;
+        padding-inline-start: 0;
+        margin: 0;
+        .li-options{
+            border-bottom: solid $defaultBg 1px;
+            cursor: pointer;
+            display: flex;
+            padding: 13px 10px 13px 10px;
+            flex-direction: row;
+            &>div:first-child{
+                flex-basis: calc(100% - 45px);
+                span{
+                    font-size: 1.0625em;
+                }
+            }
+            &>div:last-child{
+                flex-basis: 45px;
+                text-align: end;
+            }
+        }
+    }
+}

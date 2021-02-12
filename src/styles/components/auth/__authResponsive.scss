@@ -1,0 +1,16 @@
+@import '../../base/_responsive';
+
+@media(max-width: $width767){
+    .LoginScreeen{
+        padding: 0 10px 0 10px;
+    }
+}
+
+@media(max-width: $width360){
+    .LoginScreeen{
+        .LoginScreen__login{
+            font-size: 14px;
+        }
+    }
+}
+
