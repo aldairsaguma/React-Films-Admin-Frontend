@@ -1,10 +1,31 @@
-.addCategories{
+.categories{
     display: grid;
     gap: 15px;
     padding: 15px;
-}
 
-.addCategories__titles{
-    font-size: 1.5em;
-    font-family: $OpenSansBold;
+    .categories__title{
+        font-size: 1.5em;
+        font-family: $OpenSansBold;
+    }
+
+    .categories__formAdd{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 5px;
+
+        .categories__input{
+            outline: 0;
+            padding: 5px 10px;
+        }
+        
+        .categories__btnAdd{
+            @include bgColor($btnLogout);
+            @extend .btn-default;
+            cursor: pointer;
+            font-family: $OpenSansBold;
+            padding: 7px 20px;
+        }
+    }
+
+
 }

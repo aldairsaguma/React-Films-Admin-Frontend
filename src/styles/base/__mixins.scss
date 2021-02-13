@@ -1,0 +1,9 @@
+@mixin bgColor($bg, $color:$white ) {
+
+    background-color: $bg;
+    color: $color;
+    &:hover{
+        background-color: darken($color: $bg, $amount: 10);
+    }
+
+}

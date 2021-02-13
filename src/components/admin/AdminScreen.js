@@ -2,7 +2,7 @@ import React from 'react';
 //My components
 import { NavBar } from '../ui/NavBar';
 import { Sidebar } from '../ui/Sidebar';
-import { MainOptions } from '../addOptions/MainOptions';
+import { MainOptions } from '../options/categories/MainOptions';
 
 export const AdminScreen = () => {
     return (

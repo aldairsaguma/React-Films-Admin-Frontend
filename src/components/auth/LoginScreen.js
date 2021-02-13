@@ -1,6 +1,4 @@
 import React from 'react';
-import '../../styles/components/auth/__auth.scss';
-import '../../styles/components/auth/__authResponsive.scss';
 
 export const LoginScreen = () => {
 

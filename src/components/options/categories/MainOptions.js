@@ -1,5 +1,5 @@
 import React from 'react';
-import { AddCategories } from './AddCategories';
+import { AddCategories } from './Categories';
 
 export const MainOptions = () => {
     return (
