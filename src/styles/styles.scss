@@ -6,6 +6,7 @@
 @import './base/_mixins';
 @import './components/ui/_navbar';
 @import './components/ui/_sidebar';
-@import './components/addOptions/_generalOptions';
+@import './components/addOptions/__globalComponents.scss';
+@import './components/addOptions/_categories';
 @import './components/auth/_auth';
 @import './components/auth/_authResponsive';

@@ -42,7 +42,7 @@
                 .div-submit{
                     text-align: center;
                     button{
-                        @include bgColor($btnLogout);
+                        @include btnStyles($btnDefaultBg);
                         @extend .btn-default;
                         font-size: 1.25em;
                         width: 60%;

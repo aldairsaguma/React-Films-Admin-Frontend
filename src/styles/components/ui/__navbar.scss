@@ -26,7 +26,7 @@
                 padding-inline-end: 40px;
                 list-style: none;
                 .btn-logout{
-                    @include bgColor($btnLogout, $whiteOpacity);
+                    @include btnStyles($btnDefaultBg, $whiteOpacity);
                     @extend .btn-default;
                     padding: 8px 27px;
                    

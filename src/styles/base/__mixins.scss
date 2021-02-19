@@ -1,9 +1,24 @@
-@mixin bgColor($bg, $color:$white ) {
+@mixin btnStyles(
+        $bg : $btnDefaultBg, 
+        $padding : initial,
+        $color:$white, 
+        $font-size : 1em,
+    ) 
+    {
+        background-color: $bg;
+        color: $color;
+        padding: $padding;
+        font-size: $font-size;
+        &:hover{
+            background-color: darken($color: $bg, $amount: 10);
+        }
 
-    background-color: $bg;
-    color: $color;
-    &:hover{
-        background-color: darken($color: $bg, $amount: 10);
     }
 
-}
+@mixin  inputStyle 
+    (
+        $padding : initial
+    )
+    {
+        padding: $padding;
+    }

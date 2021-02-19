@@ -2,18 +2,21 @@ import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useForm } from '../../../hooks/useForm';
+import { ListCategories } from './ListCategories';
 
 export const AddCategories = () => {
 
-
     const [values, handleInputChange] = useForm({
-        categories : 'Suspenso'
+        categories : ''
     });
+    
     const {categories} = values;
 
     const handleAddCategories = (e) => {
         e.preventDefault();
+        console.log(values);
     }
+
 
     return (
         <div className="categories">
@@ -29,7 +32,8 @@ export const AddCategories = () => {
                             className="categories__input" 
                             placeholder="Agregar categoría"  
                             value={categories}
-                            onChange={handleInputChange}    
+                            onChange={handleInputChange}  
+                            autoComplete="off"  
                         />
                     </div>
                     <div>
@@ -40,6 +44,7 @@ export const AddCategories = () => {
                     </div>
                 </form>
             </div>
+            <ListCategories />
         </div>
     )
 }

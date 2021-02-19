@@ -1,0 +1,74 @@
+.categories{
+    display: grid;
+    gap: 20px;
+    padding: 15px;
+
+    .categories__title{
+        font-size: 1.5em;
+        font-family: $OpenSansBold;
+    }
+
+    .categories__formAdd{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 5px;
+
+        .categories__input{
+            @extend .input-default;
+            @include inputStyle(5px 10px)
+        }
+        
+        .categories__btnAdd{
+            @include btnStyles($btnDefaultBg);
+            @extend .btn-default;
+            cursor: pointer;
+            font-family: $OpenSansBold;
+            padding: 7px 20px;
+        }
+    }
+
+}
+
+.listCategories{
+    .listCategories__title{
+        font-size: 1.5em;
+        font-family: $OpenSansBold;
+    }
+    .listCategories__body{
+        display: grid;
+        grid-template-columns: minmax(50px, 50px) auto 1fr;
+        gap: 10px 20px;
+
+        .listCategories__details{
+
+            display: grid;
+            grid-column: span 3;
+            grid-template-columns: subgrid;
+            display: contents;
+
+            .listCategories__number{
+                align-items: center;
+                display: flex;
+                font-size: 1.125em;
+                font-family: $OpenSansSemi;
+            }
+
+            .listCategories__name{
+                display: flex;
+                align-items: center;
+            }
+
+            .listCategories__titleList{
+                font-size: 1.0625em;
+                font-family: $OpenSansRegular;
+            }
+        }
+        
+
+    }
+
+    .listCategories__container{
+        display: grid;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,33 @@
+.listCategories__button{
+   display: flex;
+   flex-direction: row
+}
+
+.globalOption__buttonUpdate{
+   margin-right: 15px;
+   button{
+        @include btnStyles($btnDefaultBg,7px 10px,$white,1.25em);
+        @extend .btn-default;
+        svg{
+           pointer-events: none;
+        }
+   }
+}
+
+.globalOption__buttonDelete{
+    button{
+        @include btnStyles($bgDelete,7px 10px,$white,1.25em);
+        @extend .btn-default;
+        svg{
+         pointer-events: none;
+      }
+   }
+   
+}
+
+.globalOption__input_search{
+   input{
+      @include inputStyle(5px 10px);
+      @extend .input-default;
+   }
+}
