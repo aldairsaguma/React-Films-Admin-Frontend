@@ -3,6 +3,7 @@ import React from 'react';
 import { NavBar } from '../ui/NavBar';
 import { Sidebar } from '../ui/Sidebar';
 import { MainOptions } from '../options/categories/MainOptions';
+import { ModalUpdate } from '../options/categories/ModalUpdateCategories';
 
 export const AdminScreen = () => {
     return (
@@ -15,6 +16,7 @@ export const AdminScreen = () => {
                        <MainOptions />
                     </div>
                 </div>
+            <ModalUpdate />
             </div>
         </>
     )

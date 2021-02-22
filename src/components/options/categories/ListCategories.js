@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { ButtonDelete } from '../globalOption/ButtonDelete'
 import { ButtonUpdate } from '../globalOption/ButtonUpdate'
-import { Search } from '../globalOption/Search'
+import { InputSearch } from '../globalOption/InputSearch'
 
 export const ListCategories = () => {
 
@@ -40,7 +40,7 @@ export const ListCategories = () => {
                 <div className="listCategories__title">
                     <span>Listado de categorías</span>
                 </div>
-                <Search />
+                <InputSearch />
                     <div className="listCategories__body">
                         {
                             state.map( (list, i) =>  (

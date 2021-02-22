@@ -72,3 +72,31 @@
         gap: 20px;
     }
 }
+
+.modal_update_categories{
+    .modal_update_categories__title{
+        font-size: 1.3125em;
+        font-family: $OpenSansBold;
+    }
+    .modal_update_categories__wrapper{
+        form{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+            .modal_update_categories__input{
+                input{
+                    @include inputStyle(5px 10px);
+                    @extend .input-default;
+                    font-family: $OpenSansRegular;
+                }
+            }
+            .modal_update_categories__button{
+                button{
+                    @include btnStyles($btnDefaultBg,7px 15px);
+                    @extend .btn-default;
+                    font-family: $OpenSansBold;
+                }
+            }
+        }
+    }
+}

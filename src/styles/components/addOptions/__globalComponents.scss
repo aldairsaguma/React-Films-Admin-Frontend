@@ -24,8 +24,7 @@
    }
    
 }
-
-.globalOption__input_search{
+.globalOption__inputSearch{
    input{
       @include inputStyle(5px 10px);
       @extend .input-default;
