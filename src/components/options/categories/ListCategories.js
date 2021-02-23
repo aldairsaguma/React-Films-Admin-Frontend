@@ -1,9 +1,17 @@
-import React, { useState } from 'react'
-import { ButtonDelete } from '../globalOption/ButtonDelete'
-import { ButtonUpdate } from '../globalOption/ButtonUpdate'
-import { InputSearch } from '../globalOption/InputSearch'
+import React, { useState } from 'react';
+import { ButtonDelete } from '../globalOption/ButtonDelete';
+import { ButtonUpdate } from '../globalOption/ButtonUpdate';
+import { InputSearch } from '../globalOption/InputSearch';
+import {useSelector, useDispatch} from 'react-redux';
+
+/****** Actions ******/
+import { uiOpenModal } from '../../../actions/ui';
+
 
 export const ListCategories = () => {
+
+    const {openModal} = useSelector(state => state.ui);
+    const dispatch = useDispatch();
 
     const [state] = useState(
         [ 
@@ -25,9 +33,11 @@ export const ListCategories = () => {
     const handleUpdate = ({target}) => {
         // console.log(target.getAttribute('data-id'));
         // console.log(target.dataset.id);
-        const categoryUpdate = state.filter( res => res.id === target.dataset.id );
-        const a = categoryUpdate.map(e  => e.name );
-        console.log(a);
+        //const categoryUpdate = state.filter( res => res.id === target.dataset.id );
+        //const a = categoryUpdate.map(e  => e.name );
+        //console.log(a);
+        dispatch(uiOpenModal())
+        console.log(openModal);
     }
 
     const handleDelete = ({target}) => {

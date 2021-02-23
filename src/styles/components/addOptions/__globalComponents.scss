@@ -24,9 +24,21 @@
    }
    
 }
+
 .globalOption__inputSearch{
    input{
       @include inputStyle(5px 10px);
       @extend .input-default;
+   }
+}
+
+.close__wrapper{
+   cursor: pointer;
+   font-size: 1.5em;
+   left: auto;
+   position: absolute;
+   right: 12px;
+   svg{
+      pointer-events: none;
    }
 }

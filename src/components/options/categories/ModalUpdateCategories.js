@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Modal from 'react-modal';
+import {useSelector, useDispatch} from 'react-redux';
+/****** Actions ******/
+import { uiCloseModal } from '../../../actions/ui';
+import { Close } from '../globalOption/Close';
 
 const customStyles = {
     content : {
@@ -9,8 +13,9 @@ const customStyles = {
     //   bottom                : 'auto',
     //   marginRight           : '-50%',
     //   transform             : 'translate(-50%, -50%)'
-        width       : '90%',
-        height      :  'auto' 
+        width       :   '90%',
+        height      :   'auto',
+        position    :   'relative'
         
     }
 };
@@ -19,10 +24,12 @@ Modal.setAppElement('#root')
 
 export const ModalUpdate = () => {
 
-    const [state, setstate] = useState(true)
+    const {openModal} = useSelector(state => state.ui);
+    const dispatch = useDispatch();
+
 
     const closeModal = () => {
-        setstate(false)
+        dispatch(uiCloseModal());
     }
 
     const handleSubmitUpdate = (e) => {
@@ -32,13 +39,14 @@ export const ModalUpdate = () => {
 
     return (
         <Modal
-          isOpen={state}
+          isOpen={openModal}
           closeTimeoutMS={200}
           onRequestClose={closeModal}
           style={customStyles}
           className="modal"
           overlayClassName="modal-fondo"
-        >
+        >   
+            <Close />
             <div className="modal_update_categories">
                 <div className="modal_update_categories__title">
                     <span>Actualizar Categoría</span>

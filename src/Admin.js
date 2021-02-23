@@ -7,8 +7,8 @@ import './styles/styles.scss';
 
 /** Font Awesome **/
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faSignOutAlt, faChevronRight, faSave, faPen, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-library.add(faSignOutAlt, faChevronRight, faSave, faPen, faTrashAlt );
+import { faSignOutAlt, faChevronRight, faSave, faPen, faTrashAlt,faTimes } from '@fortawesome/free-solid-svg-icons';
+library.add(faSignOutAlt, faChevronRight, faSave, faPen, faTrashAlt, faTimes );
 
 
 export const Admin = () => {
